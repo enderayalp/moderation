@@ -1,4 +1,4 @@
-package com.asmcm.moderation.comment.application.port.out;
+package com.asmcm.moderation.comment.application.port.out.web;
 
 import com.asmcm.moderation.comment.model.application.Comment;
 

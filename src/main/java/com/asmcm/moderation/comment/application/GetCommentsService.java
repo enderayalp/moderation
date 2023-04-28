@@ -1,7 +1,7 @@
 package com.asmcm.moderation.comment.application;
 
-import com.asmcm.moderation.comment.application.port.out.GetCommentsPort;
-import com.asmcm.moderation.comment.application.port.out.GetCommentsRequest;
+import com.asmcm.moderation.comment.application.port.out.web.GetCommentsPort;
+
 
 import com.asmcm.moderation.comment.model.application.Comment;
 import lombok.RequiredArgsConstructor;
