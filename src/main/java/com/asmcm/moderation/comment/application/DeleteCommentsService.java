@@ -18,7 +18,7 @@ public class DeleteCommentsService implements DeleteCommentsUseCase {
 
     @Override
     public List<Comment> deleteComments(Account account, double postId, CommentFilter commentFilter) {
-        getCommentsService.getComments();
+    //    getCommentsService.getComments();
         //Call ChatGPT with comments in order to get rating over comments
         //Delete negative comments according the CommentFilter
         return Collections.emptyList();
