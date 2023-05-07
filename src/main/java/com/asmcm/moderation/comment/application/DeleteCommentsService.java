@@ -1,6 +1,7 @@
 package com.asmcm.moderation.comment.application;
 
 import com.asmcm.moderation.comment.application.port.in.DeleteCommentsUseCase;
+import com.asmcm.moderation.comment.application.port.out.persistence.CommentsRepositoryPort;
 import com.asmcm.moderation.comment.model.application.Account;
 import com.asmcm.moderation.comment.model.application.Comment;
 import com.asmcm.moderation.comment.model.application.CommentFilter;
@@ -15,12 +16,16 @@ import java.util.List;
 public class DeleteCommentsService implements DeleteCommentsUseCase {
 
     private final GetCommentsService getCommentsService;
+    private final CommentsRepositoryPort commentsRepositoryPort;
 
     @Override
     public List<Comment> deleteComments(Account account, double postId, CommentFilter commentFilter) {
-    //    getCommentsService.getComments();
+    //    getCommentsService.getComments(); instagram client
         //Call ChatGPT with comments in order to get rating over comments
         //Delete negative comments according the CommentFilter
+        commentsRepositoryPort.delete(new Comment());
         return Collections.emptyList();
     }
+
+
 }
