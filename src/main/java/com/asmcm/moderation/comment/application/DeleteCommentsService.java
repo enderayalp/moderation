@@ -1,10 +1,10 @@
 package com.asmcm.moderation.comment.application;
 
+import com.asmcm.moderation.comment.application.model.Account;
+import com.asmcm.moderation.comment.application.model.Comment;
+import com.asmcm.moderation.comment.application.model.CommentFilter;
 import com.asmcm.moderation.comment.application.port.in.DeleteCommentsUseCase;
 import com.asmcm.moderation.comment.application.port.out.persistence.CommentsRepositoryPort;
-import com.asmcm.moderation.comment.model.application.Account;
-import com.asmcm.moderation.comment.model.application.Comment;
-import com.asmcm.moderation.comment.model.application.CommentFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +20,7 @@ public class DeleteCommentsService implements DeleteCommentsUseCase {
 
     @Override
     public List<Comment> deleteComments(Account account, double postId, CommentFilter commentFilter) {
-    //    getCommentsService.getComments(); instagram client
+        //getCommentsService.getComments(); instagram client
         //Call ChatGPT with comments in order to get rating over comments
         //Delete negative comments according the CommentFilter
         commentsRepositoryPort.delete(new Comment());

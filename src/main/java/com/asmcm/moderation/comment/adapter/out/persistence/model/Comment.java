@@ -1,4 +1,4 @@
-package com.asmcm.moderation.comment.model.persistence;
+package com.asmcm.moderation.comment.adapter.out.persistence.model;
 
 
 import lombok.Getter;

@@ -1,0 +1,14 @@
+moderation:
+  chat-gpt:
+    bearer-token: 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
+    baseUrl: https://api.openai.com
+    uri: /v1/chat/completions
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+

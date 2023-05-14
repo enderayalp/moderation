@@ -1,9 +1,9 @@
 package com.asmcm.moderation.comment.adapter.in.web;
 
+import com.asmcm.moderation.comment.application.model.Account;
+import com.asmcm.moderation.comment.application.model.Comment;
+import com.asmcm.moderation.comment.application.model.CommentFilter;
 import com.asmcm.moderation.comment.application.port.in.DeleteCommentsUseCase;
-import com.asmcm.moderation.comment.model.application.Account;
-import com.asmcm.moderation.comment.model.application.Comment;
-import com.asmcm.moderation.comment.model.application.CommentFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
