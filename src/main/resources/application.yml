@@ -1,6 +1,6 @@
 moderation:
   chat-gpt:
-    bearer-token: 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
+    bearer-token: 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
     baseUrl: https://api.openai.com
     uri: /v1/chat/completions
 spring:

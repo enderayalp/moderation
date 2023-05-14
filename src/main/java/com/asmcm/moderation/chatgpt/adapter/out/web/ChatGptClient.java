@@ -1,13 +1,16 @@
 package com.asmcm.moderation.chatgpt.adapter.out.web;
 
 
-import com.asmcm.moderation.comment.application.port.out.web.RateCommentsPort;
+import com.asmcm.moderation.chatgpt.application.port.out.RateCommentsPort;
+import org.openapitools.model.CreateCompletionResponse;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
-import reactor.core.publisher.Mono;
+import reactor.core.publisher.Flux;
 
-@Service
+import java.util.List;
+
+@Component
 public class ChatGptClient implements RateCommentsPort {
     private final WebClient webClient;
 
@@ -25,11 +28,12 @@ public class ChatGptClient implements RateCommentsPort {
         this.webClient = webClientBuilder.baseUrl(baseUrl).build();
     }
 
-    public Mono<String> rateComments() {
+    public Flux<CreateCompletionResponse> rateComments(List<String> comments) {
         return webClient.get()
                 .uri(uri)
                 .header("Authorization", "Bearer " + token)
                 .retrieve()
-                .bodyToMono(String.class);
+                .bodyToFlux(CreateCompletionResponse.class);
     }
+
 }
